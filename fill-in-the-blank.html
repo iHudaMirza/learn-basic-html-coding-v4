@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fill in the Blanks</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    input[type="text"] {
+      width: 150px;
+      margin: 5px;
+      padding: 5px;
+    }
+    .question {
+      margin-bottom: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      margin-right: 10px;
+      cursor: pointer;
+    }
+    #result {
+      font-weight: bold;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Fill in the Blanks</h1>
+  <p>Test your HTML knowledge by filling in the blanks below:</p>
+
+  <form id="fillForm">
+    <div class="question" data-answer="h1">
+      <p>1. &lt;<input type="text" id="q1">&gt; is used for the main heading.</p>
+    </div>
+    <div class="question" data-answer="img">
+      <p>2. &lt;<input type="text" id="q2"> src="image.jpg"&gt; is used to display images.</p>
+    </div>
+    <div class="question" data-answer="a">
+      <p>3. &lt;<input type="text" id="q3"> href="link.html"&gt; creates a hyperlink.</p>
+    </div>
+  </form>
+
+  <button onclick="checkAnswers()">Submit</button>
+  <button onclick="restartQuiz()">Restart</button>
+
+  <p id="result"></p>
+  <p>
+  <a href="index.html">← Back to Home</a> 
+  |
+  <a href="quiz.html">Next →</a>
+</p>
+
+  <script>
+    function checkAnswers() {
+      let score = 0;
+      const questions = document.querySelectorAll('.question');
+
+      questions.forEach((div, index) => {
+        const correct = div.getAttribute('data-answer');
+        const input = div.querySelector('input');
+        if (input.value.trim().toLowerCase() === correct) {
+          input.style.backgroundColor = "#c8e6c9";
+          score++;
+        } else {
+          input.style.backgroundColor = "#ffcdd2";
+        }
+      });
+
+      document.getElementById('result').textContent = `Your score: ${score} out of 3`;
+    }
+
+    function restartQuiz() {
+      const inputs = document.querySelectorAll('input');
+      inputs.forEach(input => {
+        input.value = "";
+        input.style.backgroundColor = "";
+      });
+      document.getElementById('result').textContent = "";
+    }
+  </script>
+</body>
+</html>
+

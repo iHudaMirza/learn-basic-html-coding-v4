@@ -1,0 +1,86 @@
+/* styles.css - unified look for Learn Basic HTML Coding site */
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #e0f7fa, #e1bee7);
+  color: #333;
+}
+
+h1, h2, h3 {
+  color: #4a148c;
+}
+
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+a {
+  color: #4a148c;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #ab47bc;
+  text-decoration: underline;
+}
+
+button {
+  padding: 10px 18px;
+  font-size: 1em;
+  border: none;
+  border-radius: 8px;
+  background-color: #ce93d8;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #ab47bc;
+}
+
+textarea {
+  width: 100%;
+  height: 120px;
+  margin-top: 15px;
+  padding: 10px;
+  font-size: 1em;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  resize: vertical;
+}
+
+nav {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+nav a {
+  margin: 0 10px;
+  display: inline-block;
+  padding: 8px 14px;
+  background-color: #f3e5f5;
+  border-radius: 6px;
+}
+
+nav a:hover {
+  background-color: #e1bee7;
+}
+
+footer {
+  text-align: center;
+  margin-top: 40px;
+  color: #888;
+  font-size: 0.9em;
+}
+
+

@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Fix the Broken HTML</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .container {
+      max-width: 700px;
+      margin: 40px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    pre {
+      text-align: left;
+      background: #f3f3f3;
+      padding: 10px;
+      border-radius: 6px;
+      font-family: monospace;
+    }
+
+    textarea {
+      width: 100%;
+      height: 140px;
+      margin-top: 10px;
+      font-size: 1em;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+
+    .buttons {
+      margin-top: 15px;
+    }
+
+    #result {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    .navigation-links {
+      margin-top: 30px;
+    }
+
+    .navigation-links a {
+      margin: 0 10px;
+    }
+  </style>
+</head>
+<body>
+  
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="what-is-html.html">What is HTML?</a>
+    <a href="html-tags.html">HTML Tags</a>
+    <a href="quiz.html">Quiz</a>
+    <a href="flowchart.html">HTML Flowchart</a>
+    <a href="fix-html-game.html">Fix Game</a>
+  </nav>
+
+  <div class="container">
+    <h2>Fix the Broken HTML</h2>
+    <p>Can you fix this broken HTML snippet?</p>
+
+    <pre id="brokenHTML"></pre>
+
+    <textarea id="userInput" placeholder="Fix the HTML above..."></textarea>
+
+    <div class="buttons">
+      <button onclick="checkAnswer()">✔️ Check Answer</button>
+      <button onclick="location.reload()">🔁 Restart</button>
+    </div>
+
+    <div id="result"></div>
+
+    <div class="navigation-links">
+      <a href="flowchart.html">← Back</a> |
+      <a href="html-video.html">Next →</a>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Learn Basic HTML Coding</p>
+  </footer>
+
+  <script>
+    const problems = [
+      {
+        broken: `<html>\n<body>\n<h1>Welcome to my page</h1>\n<p>This is a paragraph.\n</body>\n</html>`,
+        fixed: `<html>\n<body>\n<h1>Welcome to my page</h1>\n<p>This is a paragraph.</p>\n</body>\n</html>`
+      },
+      {
+        broken: `<html>\n<body>\n<h2>My Title<h2>\n<p>Some content</p>\n</body>\n</html>`,
+        fixed: `<html>\n<body>\n<h2>My Title</h2>\n<p>Some content</p>\n</body>\n</html>`
+      },
+      {
+        broken: `<html>\n<body>\n<p>First line<p>\nSecond line</p>\n</body>\n</html>`,
+        fixed: `<html>\n<body>\n<p>First line</p>\n<p>Second line</p>\n</body>\n</html>`
+      }
+    ];
+
+    const current = problems[Math.floor(Math.random() * problems.length)];
+    document.getElementById("brokenHTML").textContent = current.broken;
+
+    function checkAnswer() {
+      const userInput = document.getElementById("userInput").value.trim();
+      const result = document.getElementById("result");
+
+      if (userInput === current.fixed) {
+        result.innerHTML = "✅ <span style='color:green;'>Correct! Well done.</span>";
+      } else {
+        result.innerHTML = "❌ <span style='color:red;'>Not quite. Try again!</span>";
+      }
+    }
+  </script>
+</body>
+</html>

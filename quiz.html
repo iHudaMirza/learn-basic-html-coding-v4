@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HTML Quiz</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>HTML Quiz</h2>
+    <div id="quiz-container">
+      <p id="question"></p>
+      <form id="quiz-form"></form>
+      <button onclick="submitAnswer()">Submit</button>
+    </div>
+    <div id="result" style="display: none;"></div>
+    <p><a href="html-demo.html">← Previous</a> | <a href="flowchart.html">Next →</a></p>
+  </div>
+
+  <script>
+    const questions = [
+      {
+        question: "What does HTML stand for?",
+        options: ["HyperText Markup Language", "HighText Machine Language", "Hyperloop Machine Language", "Home Tool Markup Language"],
+        answer: "HyperText Markup Language"
+      },
+      {
+        question: "Which tag is used to create a hyperlink?",
+        options: ["<a>", "<p>", "<img>", "<div>"],
+        answer: "<a>"
+      },
+      {
+        question: "Which element contains the main content of a webpage?",
+        options: ["<body>", "<head>", "<title>", "<html>"],
+        answer: "<body>"
+      },
+      {
+        question: "What is the correct HTML for adding an image?",
+        options: ['<img src="image.jpg" />', '<image src="image.jpg" />', '<img href="image.jpg" />', '<pic src="image.jpg" />'],
+        answer: '<img src="image.jpg" />'
+      },
+      {
+        question: "Which tag creates a numbered list?",
+        options: ["<ol>", "<ul>", "<li>", "<dl>"],
+        answer: "<ol>"
+      }
+    ];
+
+    let currentQuestion = 0;
+    let score = 0;
+
+    function showQuestion() {
+      const questionEl = document.getElementById("question");
+      const form = document.getElementById("quiz-form");
+      form.innerHTML = "";
+
+      if (currentQuestion < questions.length) {
+        const q = questions[currentQuestion];
+        questionEl.textContent = q.question;
+
+        q.options.forEach(option => {
+          const label = document.createElement("label");
+          const input = document.createElement("input");
+          input.type = "radio";
+          input.name = "option";
+          input.value = option;
+          label.appendChild(input);
+          label.appendChild(document.createTextNode(option));
+          form.appendChild(label);
+          form.appendChild(document.createElement("br"));
+        });
+      } else {
+        // Show result
+        document.getElementById("quiz-container").style.display = "none";
+        const result = document.getElementById("result");
+        result.style.display = "block";
+        result.innerHTML = `<h3>Your Score: ${score} out of ${questions.length}</h3>
+          <button onclick="restartQuiz()">Restart Quiz</button>`;
+      }
+    }
+
+    function submitAnswer() {
+      const options = document.getElementsByName("option");
+      let selected = null;
+      options.forEach(opt => {
+        if (opt.checked) selected = opt.value;
+      });
+
+      if (selected === null) {
+        alert("Please select an answer!");
+        return;
+      }
+
+      if (selected === questions[currentQuestion].answer) {
+        score++;
+      }
+
+      currentQuestion++;
+      showQuestion();
+    }
+
+    function restartQuiz() {
+      currentQuestion = 0;
+      score = 0;
+      document.getElementById("quiz-container").style.display = "block";
+      document.getElementById("result").style.display = "none";
+      showQuestion();
+    }
+
+    // Show first question on load
+    window.onload = showQuestion;
+  </script>
+</body>
+</html>
