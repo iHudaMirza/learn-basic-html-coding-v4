@@ -22,7 +22,85 @@
   <div class="container">
     <h2>HTML Flowchart</h2>
     <p>This flowchart shows how a basic HTML page is structured.</p>
-    <img src="images/html-flowchart.jpeg" alt="HTML Flowchart" />
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HTML Flowchart</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .flowchart {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      margin: 30px auto;
+      max-width: 600px;
+    }
+    .box {
+      border: 2px solid #555;
+      border-radius: 8px;
+      padding: 10px 20px;
+      min-width: 200px;
+      text-align: center;
+      background-color: #f5f5f5;
+      box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+    }
+    .arrow {
+      font-size: 24px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="what-is-html.html">What is HTML?</a>
+    <a href="html-tags.html">HTML Tags</a>
+    <a href="html-demo.html">HTML Demo</a>
+    <a href="fill-in-the-blank.html">Fill in the Blanks</a>
+    <a href="quiz.html">Quiz</a>
+    <a href="flowchart.html">HTML Flowchart</a>
+    <a href="game.html">Game</a>
+  </nav>
+
+  <div class="container">
+    <h2>HTML Flowchart</h2>
+    <p>This flowchart shows how a basic HTML page is structured.</p>
+
+    <div class="flowchart">
+      <div class="box">&lt;!DOCTYPE html&gt;</div>
+      <div class="arrow">↓</div>
+      <div class="box">&lt;html&gt;</div>
+      <div class="arrow">↓</div>
+      <div class="box">&lt;head&gt;</div>
+      <div class="arrow">↓</div>
+      <div class="box">&lt;title&gt;, &lt;meta&gt;, &lt;link&gt;</div>
+      <div class="arrow">↓</div>
+      <div class="box">&lt;/head&gt;</div>
+      <div class="arrow">↓</div>
+      <div class="box">&lt;body&gt;</div>
+      <div class="arrow">↓</div>
+      <div class="box">&lt;h1&gt;, &lt;p&gt;, &lt;nav&gt;, &lt;section&gt;, &lt;footer&gt;, etc.</div>
+      <div class="arrow">↓</div>
+      <div class="box">&lt;/body&gt;</div>
+      <div class="arrow">↓</div>
+      <div class="box">&lt;/html&gt;</div>
+    </div>
+
+    <p>
+      <a href="index.html">← Back to Home</a> |
+      <a href="quiz.html">Next →</a>
+    </p>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Learn Basic HTML Coding</p>
+  </footer>
+
+</body>
+</html>
     <p>
   <a href="index.html">← Back to Home</a> |
   <a href="quiz.html">Next →</a>
