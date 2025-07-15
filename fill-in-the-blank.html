@@ -4,82 +4,128 @@
   <title>Fill in the Blanks</title>
   <link rel="stylesheet" href="styles.css">
   <style>
-  form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  margin-top: 20px;
-}
-.question {
-  background: #f9f9f9;
-  padding: 10px 15px;
-  border-radius: 10px;
-}
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #dff6fd, #f5d6ff);
+    }
 
-.question p {
-  margin: 0;
-}
+    .container {
+      max-width: 700px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: white;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      margin-left: 20px;
+      margin-right: 20px;
+    }
 
-input[type="text"] {
-  padding: 5px 8px;
-  font-size: 16px;
-  width: 100px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
+    h1 {
+      color: #6c2db9;
+      text-align: center;
+    }
 
-button {
-  margin-right: 10px;
-  padding: 8px 16px;
-  border: none;
-  background-color: #d6a8ff;
-  color: #fff;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 14px;
-}
+    p {
+      font-size: 16px;
+    }
 
-button:hover {
-  background-color: #b978f0;
-}
- #result {
-    font-weight: bold;
-    margin-top: 20px;
-  }
-</style>
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .question {
+      background: #f9f9f9;
+      padding: 10px 15px;
+      border-radius: 10px;
+    }
+
+    .question p {
+      margin: 0;
+    }
+
+    input[type="text"] {
+      padding: 5px 8px;
+      font-size: 16px;
+      width: 100px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      margin-right: 10px;
+      padding: 8px 16px;
+      border: none;
+      background-color: #d6a8ff;
+      color: #fff;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+      margin-top: 15px;
+    }
+
+    button:hover {
+      background-color: #b978f0;
+    }
+
+    #result {
+      font-weight: bold;
+      margin-top: 20px;
+    }
+
+    a {
+      text-decoration: none;
+      color: #6c2db9;
+      font-weight: bold;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .navigation {
+      margin-top: 20px;
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
-  <h1>Fill in the Blanks</h1>
-  <p>Test your HTML knowledge by filling in the blanks below:</p>
+  <div class="container">
+    <h1>Fill in the Blanks</h1>
+    <p>Test your HTML knowledge by filling in the blanks below:</p>
 
-  <form id="fillForm">
-    <div class="question" data-answer="h1">
-      <p>1. &lt;<input type="text" id="q1">&gt; is used for the main heading.</p>
-    </div>
-    <div class="question" data-answer="img">
-      <p>2. &lt;<input type="text" id="q2"> src="image.jpg"&gt; is used to display images.</p>
-    </div>
-    <div class="question" data-answer="a">
-      <p>3. &lt;<input type="text" id="q3"> href="link.html"&gt; creates a hyperlink.</p>
-    </div>
-  </form>
+    <form id="fillForm">
+      <div class="question" data-answer="h1">
+        <p>1. &lt;<input type="text" id="q1">&gt; is used for the main heading.</p>
+      </div>
+      <div class="question" data-answer="img">
+        <p>2. &lt;<input type="text" id="q2"> src="image.jpg"&gt; is used to display images.</p>
+      </div>
+      <div class="question" data-answer="a">
+        <p>3. &lt;<input type="text" id="q3"> href="link.html"&gt; creates a hyperlink.</p>
+      </div>
+    </form>
 
-  <button onclick="checkAnswers()">Submit</button>
-  <button onclick="restartQuiz()">Restart</button>
+    <button onclick="checkAnswers()">Submit</button>
+    <button onclick="restartQuiz()">Restart</button>
 
-  <p id="result"></p>
-  <p>
-  <a href="index.html">← Back to Home</a> 
-  |
-  <a href="quiz.html">Next →</a>
-</p>
+    <p id="result"></p>
+
+    <div class="navigation">
+      <a href="index.html">← Back to Home</a> |
+      <a href="quiz.html">Next →</a>
+    </div>
+  </div>
 
   <script>
     function checkAnswers() {
       let score = 0;
       const questions = document.querySelectorAll('.question');
 
-      questions.forEach((div, index) => {
+      questions.forEach((div) => {
         const correct = div.getAttribute('data-answer');
         const input = div.querySelector('input');
         if (input.value.trim().toLowerCase() === correct) {
@@ -104,4 +150,5 @@ button:hover {
   </script>
 </body>
 </html>
+
 
