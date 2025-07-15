@@ -3,30 +3,77 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Video Demo</title>
+  <title>HTML Video Tutorial</title>
+  <link rel="stylesheet" href="styles.css">
   <style>
     body {
-      background-color: #f8f8f8;
       font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #e0f7fa, #fce4ec);
+      margin: 0;
+      padding: 0;
+    }
+    nav {
+      background-color: #fff;
+      padding: 15px;
       text-align: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #6a1b9a;
+      font-weight: bold;
+    }
+    .container {
+      max-width: 600px;
+      margin: 40px auto;
+      background: white;
       padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-align: center;
     }
     video {
-      width: 90%;
-      max-width: 600px;
+      width: 100%;
       border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      margin: 20px 0;
+    }
+    footer {
+      text-align: center;
+      margin: 40px 0 20px;
+      color: #888;
     }
   </style>
 </head>
 <body>
 
-  <h1>Watch This Video</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="what-is-html.html">What is HTML?</a>
+    <a href="html-tags.html">HTML Tags</a>
+    <a href="quiz.html">Quiz</a>
+    <a href="game.html">Game</a>
+  </nav>
 
-  <video controls>
-    <source src="myvideo.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
+  <div class="container">
+    <h1>HTML Video Tutorial</h1>
+    <p>This video explains the basics of HTML step by step.</p>
+
+    <video controls>
+      <source src="html-video.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+
+    <div>
+      <a href="index.html" style="color: purple;">← Back to Home</a>
+      &nbsp; | &nbsp;
+      <a href="html-tags.html" style="color: purple;">Next →</a>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 Learn Basic HTML Coding
+  </footer>
 
 </body>
 </html>
