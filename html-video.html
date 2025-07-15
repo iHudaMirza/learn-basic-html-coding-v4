@@ -2,57 +2,76 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>HTML Video Tutorial</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css" />
   <style>
     body {
-      font-family: Arial, sans-serif;
       background: linear-gradient(to right, #e0f7fa, #fce4ec);
+      font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
     }
     nav {
       background-color: #fff;
-      padding: 15px;
-      text-align: center;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      padding: 10px 20px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      border-bottom: 1px solid #ccc;
     }
     nav a {
-      margin: 0 10px;
       text-decoration: none;
       color: #6a1b9a;
       font-weight: bold;
     }
     .container {
-      max-width: 600px;
+      max-width: 700px;
       margin: 40px auto;
-      background: white;
-      padding: 20px;
+      background: #fff;
+      padding: 30px;
       border-radius: 20px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       text-align: center;
+    }
+    h1 {
+      color: #6a1b9a;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 1rem;
+      margin-bottom: 25px;
     }
     video {
       width: 100%;
-      border-radius: 10px;
-      margin: 20px 0;
+      border-radius: 15px;
+    }
+    .nav-links {
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-between;
+    }
+    .nav-links a {
+      color: #6a1b9a;
+      text-decoration: none;
+      font-weight: bold;
     }
     footer {
       text-align: center;
-      margin: 40px 0 20px;
-      color: #888;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #777;
     }
   </style>
 </head>
 <body>
 
   <nav>
-    <a href="index.html">Home</a>
-    <a href="what-is-html.html">What is HTML?</a>
+    <a href="index.html">What is HTML?</a>
     <a href="html-tags.html">HTML Tags</a>
+    <a href="html-demo.html">Demo</a>
+    <a href="html-video.html">Video</a>
     <a href="quiz.html">Quiz</a>
-    <a href="game.html">Game</a>
   </nav>
 
   <div class="container">
@@ -64,15 +83,14 @@
       Your browser does not support the video tag.
     </video>
 
-    <div>
-      <a href="index.html" style="color: purple;">← Back to Home</a>
-      &nbsp; | &nbsp;
-      <a href="html-tags.html" style="color: purple;">Next →</a>
+    <div class="nav-links">
+      <a href="index.html">&larr; Back to Home</a>
+      <a href="quiz.html">Next &rarr;</a>
     </div>
   </div>
 
   <footer>
-    © 2025 Learn Basic HTML Coding
+    &copy; 2025 Learn Basic HTML Coding
   </footer>
 
 </body>
