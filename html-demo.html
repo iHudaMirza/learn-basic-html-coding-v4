@@ -1,24 +1,58 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>What is HTML?</title>
+  <title>HTML Demo</title>
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f8ff;
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #003366;
+    }
+    pre {
+      background: #eee;
+      padding: 15px;
+      overflow-x: auto;
+      border-radius: 8px;
+    }
+    .output {
+      margin-top: 20px;
+      padding: 15px;
+      background-color: #f9f9f9;
+      border-left: 4px solid #4CAF50;
+      border-radius: 6px;
+    }
+    .navigation {
+      margin-top: 30px;
+    }
+    .navigation a {
+      margin-right: 15px;
+      color: #0033cc;
+      text-decoration: none;
+    }
+    .navigation a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-  <nav>
-    <a href="what-is-html.html">What is HTML?</a>
-    <a href="html-tags.html">HTML Tags</a>
-    <a href="html-demo.html">HTML Demo</a>
-    <a href="fill-in-the-blank.html">Fill in the Blanks</a>
-    <a href="quiz.html">Quiz</a>
-    <a href="flowchart.html">HTML Flowchart</a>
-    <a href="fix-html-game.html">Game</a>
-  </nav>
+  <div class="container">
     <h2>Basic HTML Structure</h2>
-    <pre>
+
+    <pre><code>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
@@ -28,16 +62,17 @@
     &lt;h1&gt;Hello, World!&lt;/h1&gt;
   &lt;/body&gt;
 &lt;/html&gt;
-    </pre>
+    </code></pre>
 
-    <p>
-      <a href="index.html">← Back to Home</a> |
-      <a href="html-tags.html">Next →</a>
-    </p>
+    <div class="output">
+      <h1>Hello, World!</h1>
+    </div>
+
+    <div class="navigation">
+      <a href="index.html">&larr; Back to Home</a>
+      <a href="html-tags.html">Next &rarr;</a>
+    </div>
   </div>
-
-  <footer>
-    <p>&copy; 2025 Learn Basic HTML Coding</p>
-  </footer>
 </body>
 </html>
+
