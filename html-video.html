@@ -2,71 +2,32 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HTML Video Tutorial</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Video Demo</title>
   <style>
     body {
+      background-color: #f8f8f8;
       font-family: Arial, sans-serif;
-      background: linear-gradient(to right, #e0f7fa, #fce4ec);
-      margin: 0;
-      padding: 0;
-    }
-    .container {
-      max-width: 700px;
-      margin: 40px auto;
-      background: white;
-      padding: 30px;
-      border-radius: 20px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    }
-    h2 {
-      color: purple;
-      margin-top: 0;
+      text-align: center;
+      padding: 20px;
     }
     video {
-      width: 100%;
-      max-width: 100%;
-      height: auto;
-      border-radius: 12px;
-      display: block;
-      margin-top: 15px;
-    }
-    .nav-links {
-      display: flex;
-      justify-content: space-between;
-      margin-top: 20px;
-    }
-    .nav-links a {
-      text-decoration: none;
-      color: purple;
-    }
-    footer {
-      text-align: center;
-      margin-top: 40px;
-      font-size: 14px;
-      color: gray;
+      width: 90%;
+      max-width: 600px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h2>HTML Video Tutorial</h2>
-    <p>This video explains the basics of HTML step by step.</p>
 
-    <video controls>
-      <source src="video-tutorial.mp4" type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
+  <h1>Watch This Video</h1>
 
-    <div class="nav-links">
-      <a href="index.html">&larr; Back to Home</a>
-      <a href="nextpage.html">Next &rarr;</a>
-    </div>
-  </div>
+  <video controls>
+    <source src="myvideo.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
 
-  <footer>
-    &copy; 2025 Learn Basic HTML Coding
-  </footer>
 </body>
 </html>
+
