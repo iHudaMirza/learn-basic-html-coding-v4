@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,38 +5,68 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>HTML Video Tutorial</title>
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #e0f7fa, #fce4ec);
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 700px;
+      margin: 40px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+      color: purple;
+      margin-top: 0;
+    }
+    video {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      display: block;
+      margin-top: 15px;
+    }
+    .nav-links {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: purple;
+    }
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 14px;
+      color: gray;
+    }
+  </style>
 </head>
 <body>
-
-  <nav>
-    <a href="what-is-html.html">What is HTML?</a>
-    <a href="html-tags.html">HTML Tags</a>
-    <a href="html-demo.html">HTML Demo</a>
-    <a href="fill-in-the-blank.html">Fill in the Blanks</a>
-    <a href="quiz.html">Quiz</a>
-    <a href="flowchart.html">HTML Flowchart</a>
-    <a href="fix-html-game.html">Game</a>
-    <a href="html-video.html">Video</a>
-  </nav>
-
   <div class="container">
     <h2>HTML Video Tutorial</h2>
     <p>This video explains the basics of HTML step by step.</p>
 
-    <video width="640" controls>
-      <source src="videos/html-tutorial.mp4" type="video/mp4" />
+    <video controls>
+      <source src="video-tutorial.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
 
-    <p>
-  <a href="index.html">← Back to Home</a> |
-  <a href="quiz.html">Next →</a>
-  </p>
+    <div class="nav-links">
+      <a href="index.html">&larr; Back to Home</a>
+      <a href="nextpage.html">Next &rarr;</a>
+    </div>
   </div>
 
   <footer>
-    <p>&copy; 2025 Learn Basic HTML Coding</p>
+    &copy; 2025 Learn Basic HTML Coding
   </footer>
-
 </body>
 </html>
