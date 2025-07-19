@@ -18,7 +18,39 @@
 
   <div class="container">
     <h2>Fix the Broken HTML Game</h2>
-    <p>This page is coming soon! 🛠️</p>
+    <p>Choose the correct HTML code that fixes the error below:</p>
+
+    <div class="question-box">
+      <p class="broken-code">Broken: <code>&lt;p&gt;This is a paragraph&lt;p&gt;</code></p>
+
+      <form>
+        <label><input type="radio" name="q1" /> &lt;p&gt;This is a paragraph&lt;/p&gt;</label><br>
+        <label><input type="radio" name="q1" /> &lt;para&gt;This is a paragraph&lt;/para&gt;</label><br>
+        <label><input type="radio" name="q1" /> &lt;p/&gt;This is a paragraph</label>
+      </form>
+    </div>
+
+    <div class="question-box">
+      <p class="broken-code">Broken: <code>&lt;img "image.jpg"&gt;</code></p>
+
+      <form>
+        <label><input type="radio" name="q2" /> &lt;img src="image.jpg" /&gt;</label><br>
+        <label><input type="radio" name="q2" /> &lt;image src="image.jpg"&gt;</label><br>
+        <label><input type="radio" name="q2" /> &lt;img href="image.jpg"&gt;</label>
+      </form>
+    </div>
+
+    <div class="question-box">
+      <p class="broken-code">Broken: <code>&lt;a&gt;Visit&lt;/a&gt;</code></p>
+
+      <form>
+        <label><input type="radio" name="q3" /> &lt;a href="https://example.com"&gt;Visit&lt;/a&gt;</label><br>
+        <label><input type="radio" name="q3" /> &lt;a src="example.com"&gt;Visit&lt;/a&gt;</label><br>
+        <label><input type="radio" name="q3" /> &lt;a url="example.com"&gt;Visit&lt;/a&gt;</label>
+      </form>
+    </div>
+
+    <p><em>This game is for learning purposes only. No answers are recorded.</em></p>
   </div>
 </body>
 </html>
